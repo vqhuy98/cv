@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vu Quang Huy — Backend Java Developer</title>
+  <meta name="description" content="CV of Vu Quang Huy — Backend Java Developer with 6 years building enterprise microservices (Java 21, Quarkus, DDD, Kafka, Kubernetes)." />
+  <style>
+    :root {
+      --ink: #1a2230;
+      --muted: #5b6675;
+      --accent: #1f5fa8;
+      --line: #e2e7ee;
+      --bg: #f4f6f9;
+      --card: #ffffff;
+      --maxw: 860px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    .page {
+      max-width: var(--maxw);
+      margin: 32px auto;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 6px 28px rgba(20, 34, 48, 0.07);
+      overflow: hidden;
+    }
+
+    header {
+      padding: 36px 44px 28px;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+    }
+
+    header .role {
+      margin: 4px 0 12px;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+
+    .contact a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px dotted transparent;
+    }
+
+    .contact a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    main { padding: 8px 44px 44px; }
+
+    section { margin-top: 28px; }
+
+    h2 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--accent);
+      margin: 0 0 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    p { margin: 0 0 10px; }
+
+    .summary { color: #2c3645; }
+
+    .skill-row {
+      display: grid;
+      grid-template-columns: 165px 1fr;
+      gap: 6px 14px;
+      padding: 5px 0;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .skill-row:last-child { border-bottom: none; }
+
+    .skill-row .label { font-weight: 600; color: #34404f; }
+
+    .skill-row .val { color: #485263; }
+
+    .job { margin-bottom: 22px; }
+
+    .job:last-child { margin-bottom: 0; }
+
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .job-head .company { font-weight: 700; font-size: 15.5px; }
+
+    .job-head .date { color: var(--muted); font-size: 13px; font-style: italic; white-space: nowrap; }
+
+    .job .title { font-weight: 600; color: #34404f; margin: 1px 0 2px; }
+
+    .job .blurb { font-style: italic; color: var(--muted); margin: 0 0 8px; font-size: 14px; }
+
+    ul { margin: 0; padding-left: 20px; }
+
+    li { margin-bottom: 5px; }
+
+    .stack {
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .stack b { color: #34404f; font-weight: 600; }
+
+    .proj { margin-bottom: 16px; }
+
+    .proj-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .proj-head .name { font-weight: 700; }
+
+    .proj-head .meta { color: var(--muted); font-size: 13px; font-style: italic; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; }
+
+    .footer-note {
+      text-align: center;
+      color: #9aa4b2;
+      font-size: 12px;
+      margin: 0 0 28px;
+    }
+
+    .footer-note a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      header, main { padding-left: 22px; padding-right: 22px; }
+      header h1 { font-size: 27px; }
+      .skill-row { grid-template-columns: 1fr; gap: 2px; }
+      .skill-row .label { color: var(--accent); }
+      .two-col { grid-template-columns: 1fr; }
+      .page { margin: 0; border-radius: 0; border: none; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 12px; }
+      .page { box-shadow: none; border: none; margin: 0; max-width: 100%; border-radius: 0; }
+      header { padding: 0 0 16px; }
+      main { padding: 0; }
+      .footer-note { display: none; }
+      section { margin-top: 16px; }
+      a { color: var(--ink) !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Vu Quang Huy</h1>
+      <div class="role">Backend Java Developer</div>
+      <div class="contact">
+        <span>Ho Chi Minh City, Vietnam</span>
+        <a href="tel:+84944204960">+84 944 204 960</a>
+        <a href="mailto:huy9816@gmail.com">huy9816@gmail.com</a>
+        <a href="https://github.com/vqhuy98" target="_blank" rel="noopener">github.com/vqhuy98</a>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Professional Summary</h2>
+        <p class="summary">
+          Backend Java Developer with 6 years of experience building and maintaining enterprise microservices for
+          finance and digital product platforms. Currently developing a multi-tenant, multi-currency gift card and
+          prepaid platform using Java 21 and Quarkus, applying hexagonal architecture, Domain-Driven Design, and
+          event-driven patterns with Apache Kafka. Strong in REST API design, PostgreSQL, Kubernetes, and CI/CD,
+          with a track record of owning features end-to-end from requirement clarification through production support.
+        </p>
+      </section>
+
+      <section>
+        <h2>Technical Skills</h2>
+        <div class="skill-row"><span class="label">Languages</span><span class="val">Java, Kotlin, TypeScript, JavaScript, SQL</span></div>
+        <div class="skill-row"><span class="label">Backend &amp; Frameworks</span><span class="val">Quarkus, Spring Boot, Spring MVC, Hibernate ORM / Panache, JAX-RS, REST APIs</span></div>
+        <div class="skill-row"><span class="label">Architecture</span><span class="val">Microservices, Hexagonal Architecture, Domain-Driven Design (DDD), Event-Driven Architecture, Multi-Tenancy</span></div>
+        <div class="skill-row"><span class="label">Messaging &amp; Streaming</span><span class="val">Apache Kafka, Confluent, Event-Driven Systems</span></div>
+        <div class="skill-row"><span class="label">Databases</span><span class="val">PostgreSQL, Oracle, MS SQL Server, MySQL, Flyway (DB migrations)</span></div>
+        <div class="skill-row"><span class="label">Security &amp; Auth</span><span class="val">Keycloak, OAuth2 / OIDC, JWT, HMAC, AES encryption</span></div>
+        <div class="skill-row"><span class="label">DevOps &amp; Cloud</span><span class="val">Docker, Kubernetes, Kustomize, ArgoCD, Terraform, GitHub Actions, CI/CD, JFrog Artifactory, Datadog</span></div>
+        <div class="skill-row"><span class="label">Testing</span><span class="val">JUnit 5, Mockito, REST Assured, Testcontainers, ArchUnit, Vitest</span></div>
+        <div class="skill-row"><span class="label">Frontend</span><span class="val">Vue 3, TypeScript, Tailwind CSS, Vite</span></div>
+        <div class="skill-row"><span class="label">Practices</span><span class="val">Agile / Scrum, Code Review, Requirement Analysis, Performance Optimization</span></div>
+      </section>
+
+      <section>
+        <h2>Work Experience</h2>
+
+        <div class="job">
+          <div class="job-head">
+            <span class="company">Axon Active</span>
+            <span class="date">07/2023 – Present</span>
+          </div>
+          <div class="title">Software Developer&nbsp;&nbsp;|&nbsp;&nbsp;Ho Chi Minh City, Vietnam</div>
+          <p class="blurb">Backend development for a multi-tenant, multi-currency gift card and prepaid platform in a microservices environment.</p>
+          <ul>
+            <li>Develop and maintain backend microservices using Java 21 and Quarkus, following hexagonal architecture and Domain-Driven Design with strict domain/application layer separation.</li>
+            <li>Design and extend REST APIs and Kafka-based event-driven workflows (producers and consumers) for order management, prepaid account activation, top-up, redemption, and cross-acceptance.</li>
+            <li>Work with PostgreSQL via Hibernate ORM / Panache and manage schema evolution with Flyway in a database-per-tenant multi-tenancy model.</li>
+            <li>Implement secure integrations including Keycloak / OIDC authentication, JWT, HMAC-signed webhooks, and AES encryption for sensitive configuration.</li>
+            <li>Contribute frontend features to the admin and customer portal using Vue 3 and TypeScript.</li>
+            <li>Write unit and integration tests with JUnit 5, Mockito, REST Assured, and Testcontainers; enforce architecture rules with ArchUnit.</li>
+            <li>Deploy and operate services with Docker, Kubernetes (Kustomize overlays), and GitHub Actions CI/CD; investigate and resolve production issues using Datadog.</li>
+            <li>Own features end-to-end, collaborating with QA and business stakeholders to clarify requirements, estimate scope, and deliver stable releases.</li>
+          </ul>
+          <p class="stack"><b>Tech Stack:</b> Java 21, Quarkus, Hibernate/Panache, PostgreSQL, Apache Kafka, Keycloak/OIDC, Kubernetes, Kustomize, Terraform, GitHub Actions, JFrog, Datadog, Vue 3, TypeScript</p>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <span class="company">Tego Global</span>
+            <span class="date">07/2021 – 07/2023</span>
+          </div>
+          <div class="title">Software Developer&nbsp;&nbsp;|&nbsp;&nbsp;Ho Chi Minh City, Vietnam</div>
+          <p class="blurb">Fintech backend services and mobile product development.</p>
+          <ul>
+            <li>Developed and maintained microservices for the SPN Merchant fintech platform, focusing on transaction-related workflows and system integrations.</li>
+            <li>Implemented backend features, fixed production issues, and supported integration with surrounding systems to ensure stable service operation.</li>
+            <li>Contributed to the Moochies children's smartwatch product using Kotlin and Java, delivering real-time location tracking and alerting features.</li>
+            <li>Worked in cross-functional teams to translate business requirements into technical tasks and deliver features on schedule.</li>
+          </ul>
+          <p class="stack"><b>Tech Stack:</b> Java, Kotlin, Spring Boot, Oracle, Apache Kafka, Kubernetes, ArgoCD</p>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <span class="company">FPT Software</span>
+            <span class="date">06/2020 – 07/2021</span>
+          </div>
+          <div class="title">Software Developer&nbsp;&nbsp;|&nbsp;&nbsp;Ho Chi Minh City, Vietnam</div>
+          <p class="blurb">Enterprise internal systems and digital workflow solutions.</p>
+          <ul>
+            <li>Implemented backend logic and UI features using Spring MVC and JavaScript for internal business systems.</li>
+            <li>Designed database structures and worked with business analysts to convert requirements into practical software features.</li>
+            <li>Participated in an Appian low-code project for an oil &amp; gas client, contributing to workflow implementation and process digitization.</li>
+            <li>Led a small team on one internal project, supporting task delegation, code review, and feature delivery.</li>
+          </ul>
+          <p class="stack"><b>Tech Stack:</b> Java, Spring MVC, Spring Boot, JavaScript, Appian, SQL</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Selected Projects</h2>
+
+        <div class="proj">
+          <div class="proj-head">
+            <span class="name">Prepaid Plus – Gift Card &amp; Prepaid Platform</span>
+            <span class="meta">Axon Active | Jul 2023 – Present</span>
+          </div>
+          <ul>
+            <li>Multi-tenant, multi-currency platform for gift card and prepaid account management (activation, top-up, redemption, cross-acceptance, B2B onboarding).</li>
+            <li>Delivered new features and integration changes across Quarkus microservices in a Kubernetes environment; contributed to backend restructuring for scalability and maintainability.</li>
+          </ul>
+        </div>
+
+        <div class="proj">
+          <div class="proj-head">
+            <span class="name">SPN Merchant – Fintech Merchant Platform</span>
+            <span class="meta">Tego Global | Feb 2022 – Jul 2023</span>
+          </div>
+          <ul>
+            <li>Developed backend functionality for merchant transaction processing and operational reporting.</li>
+            <li>Worked on service integration and production support for a microservice-based fintech system.</li>
+          </ul>
+        </div>
+
+        <div class="proj">
+          <div class="proj-head">
+            <span class="name">Moochies Smartwatch App</span>
+            <span class="meta">Tego Global | Nov 2022 – Jul 2023</span>
+          </div>
+          <ul>
+            <li>Built Android watch and mobile features for a children's smartwatch product, including real-time location tracking and alerting workflows.</li>
+          </ul>
+        </div>
+
+        <div class="proj">
+          <div class="proj-head">
+            <span class="name">Oil &amp; Gas Management Platform</span>
+            <span class="meta">FPT Software | Nov 2020 – Jun 2021</span>
+          </div>
+          <ul>
+            <li>Built digital workflows and data models using Appian for enterprise business processes; supported dashboard and unit-conversion features.</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="two-col">
+        <section>
+          <h2>Education</h2>
+          <p><b>FPT University Ho Chi Minh</b> | 2016 – 2020<br />
+          Bachelor of Software Engineering | GPA: 7.12 / 10</p>
+        </section>
+
+        <section>
+          <h2>Languages</h2>
+          <p>Vietnamese (Native)<br />English (Professional working proficiency)</p>
+        </section>
+      </div>
+
+      <section>
+        <h2>Interests</h2>
+        <p>Software architecture, blockchain, stock market, e-commerce, algorithms, fintech</p>
+      </section>
+    </main>
+  </div>
+
+  <p class="footer-note">
+    Built with plain HTML/CSS · <a href="javascript:window.print()">Print / Save as PDF</a>
+  </p>
+</body>
+</html>
